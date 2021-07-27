@@ -1,176 +1,59 @@
-# The Site Configuration
+# Setup
+title: Heart_1ess's Blog
+description: A Dream Chaser.Keep pushing forward.
+url: https://heart-1ess.github.io/Blogs/
+avatar: /avatar.JPG
+paginate: 5
+permalink: pretty
+cover_image: /11.jpg
 
-# Import the theme
-theme: jekyll-theme-chirpy
+# Gems
+plugins:
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
 
-# Only if your site type is GitHub Project sites and doesn't have a custom domain,
-# change below value to '/projectname'.
-baseurl: ''
+# Optimize Jekyll
+exclude:
+  - .editorconfig
+  - .git
+  - .jekyll-cache
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
+  - scripts/
+  - not-pure-poole.gemspec
 
-# The language of the site layout › http://www.lingoes.net/en/translator/langcode.htm
-# Go to folder '_data/locales' to check the available language options
+# Optimize Jekyl SEO Tag
+twitter:
+  username: NULL
+  card: NULL
+logo: logo.png
+social:
+  name: Heart_1ess
+  links:
+    - https://twitter.com/
+    - https://github.com/heart-1ess
+google_site_verification: xxxxx
 lang: en
 
-# The lang attribute of HTML › http://www.lingoes.net/en/translator/langcode.htm
-# We can specify a language different from the layout of the content.
-# If it is not assigned, the site will use the value of 'lang' instead.
-content_lang: ''
-
-# Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone: Asia/Shanghai
-
-# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
-# ↓ --------------------------
-
-title: Heart_1ess's Blogs              # the main title
-
-tagline: A Dream Chaser                # it will display as the sub-title
-
-description: >-                        # used by seo meta and the atom feed
-  From SCSS, BUPT.Keep pushing forward.
-
-# fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: 'https://heart-1ess.github.io/Blogs/'
-
-github:
-  username: heart-1ess             # change to your github username
-
-twitter:
-  username: NULL            # change to your twitter username
-
-social:
-  # Change to your full name.
-  # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Heart_1ess
-  email: Heart_1ess@bupt.edu.cn             # change to your email address
-  links:
-    # The first element serves as the copyright owner's link
-    # - https://twitter.com/              # change to your twitter homepage
-    - https://github.com/Heart-1ess       # change to your github homepage
-    # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
-
-# google_site_verification: google_meta_tag_verification # change to your verification string
-
-# ↑ --------------------------
-
-
-# google_analytics:
-#  id: ''              # fill in your Google Analytics ID
-   # Google Analytics pageviews report settings
-#  pv:
-#    proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
-#    cache_path:       # the local PV cache data, friendly to visitors from GFW region
-
-# Prefer color scheme setting.
-#
-# Note: Keep empty will follow the system prefer color by default,
-# and there will be a toggle to switch the theme between dark and light
-# on the bottom left of the sidebar.
-#
-# Available options:
-#
-#     light  - Use the light color scheme
-#     dark   - Use the dark color scheme
-#
-theme_mode:   # [light|dark]
-
-# The CDN endpoint for images.
-# Notice that once it is assigned, the CDN url
-# will be added to all image (site avatar & posts' images) paths starting with '/'
-#
-# e.g. 'https://cdn.com'
-img_cdn: ''
-
-# the avatar on sidebar, support local or CORS resources
-avatar: https://raw.githubusercontent.com/Heart-1ess/Heart-1ess.github.io/main/assets/images/avatar.JPG
-
-# boolean type, the global switch for ToC in posts.
-toc: true
-
-disqus:
-  comments: false  # boolean type, the global switch for posts comments.
-  shortname: ''    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-
-paginate: 10
-
-# ------------ The following options are not recommended to be modified ------------------
-
-kramdown:
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:   # Rouge Options › https://github.com/jneen/rouge#full-options
-    css_class: highlight
-    # default_lang: console
-    span:
-      line_numbers: false
-    block:
-      line_numbers: true
-      start_line: 1
-
-collections:
-  tabs:
-    output: true
-    sort_by: order
-
-
-defaults:
-  -
-    scope:
-      path: ''          # An empty string here means all files in the project
-      type: posts
-    values:
-      layout: post
-      comments: true    # Enable comments in posts.
-      toc: true         # Display TOC column in posts.
-      # DO NOT modify the following parameter unless you are confident enough
-      # to update the code of all other post links in this project.
-      permalink: /posts/:title/
-  -
-    scope:
-      path: _drafts
-    values:
-      comments: false
-  -
-    scope:
-      path: ''
-      type: tabs             # see `site.collections`
-    values:
-      layout: page
-      permalink: /:title/
-      dynamic_title: true    # Hide title in mobile screens.
-
 sass:
-  style: compressed
+  sass_dir: _sass
+  style: :compressed
 
-compress_html:
-  clippings: all
-  comments: all
-  endings: all
-  profile: false
-  blanklines: false
-  ignore:
-    envs: [development]
+# Options
 
-exclude:
-  - '*.gem'
-  - '*.gemspec'
-  - tools
-  - docs
-  - README.md
-  - LICENSE
-  - gulpfile.js
-  - node_modules
-  - '*.json'
+# Replace this value and uncomment to enable Google Analytics tracking
+# google_analytics: UA-000000-0
 
-jekyll-archives:
-  enabled: [categories, tags]
-  layouts:
-    category: category
-    tag: tag
-  permalinks:
-    tag: /tags/:name/
-    category: /categories/:name/
+# Replace this value and uncomment to enable Disqus
+# disqus: xxxxxx
 
-# Outdated configuration warning
-outdated: '-- Missing configuration options! --'
+# Specify the author for blog posts
+author:
+  name: Heart_1ess
+  url: https://github.com/heart-1ess/
+  email: Heart_1ess@bupt.edu.cn

@@ -1,0 +1,9 @@
+- title: Email
+  url: malito://Heart_1ess@bupt.edu.cn/
+  icon: fas fa-envelope
+- title: Twitter
+  url: https://twitter.com/
+  icon: fab fa-twitter
+- title: GitHub
+  url: https://github.com/Heart-1ess/
+  icon: fab fa-github
